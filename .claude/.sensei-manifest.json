@@ -1,0 +1,47 @@
+{
+  "manifest_version": 1,
+  "version": "0.0.5",
+  "installed_at": "2026-04-18T16:32:56.527Z",
+  "files": [
+    {
+      "path": "CLAUDE.md",
+      "sha256": "35dcf1a1867930b4094089f3aedbd7f17eeb94845289772386e4917300a1faed"
+    },
+    {
+      "path": "skills/socratic-hint/SKILL.md",
+      "sha256": "70b4e7f5f3a7b4d33df560822a703eee457ec354a737448b414768e7a34ea886"
+    },
+    {
+      "path": "output-styles/sensei-tutor.md",
+      "sha256": "3f275142f95c5102ed7461e9a8f9c219b8f2ba5848ad5d12ba11dccf297edd0e"
+    },
+    {
+      "path": "hooks/session-start.js",
+      "sha256": "055eb49eb96c12ebb9260025fb2058540a62a2e5c785b4d8be62dd5a2fde5dc6"
+    },
+    {
+      "path": "hooks/user-prompt-submit.js",
+      "sha256": "fb527804941e062b344afc6b87b522014d6b607edbd8e9d58e306497995d72c2"
+    },
+    {
+      "path": "hooks/_lib/trigger-phrases.json",
+      "sha256": "67736437a94df4bee33e0ad7735d07710eedbc32313de2030b98eeaee882f782"
+    },
+    {
+      "path": "commands/emergency-mode.md",
+      "sha256": "4bfe3cca1a74c7c854fd663446570f0a58713a31ebebeda71dad5089b80d1170"
+    },
+    {
+      "path": "commands/reveal.md",
+      "sha256": "09f0e56d2ff2dbc3f910b43be9abb7971207a69a1a8c79725a49726f42ae7c6a"
+    },
+    {
+      "path": "commands/sensei-review.md",
+      "sha256": "e780c1deed5fb2afd06b3ca675c89898ae085d7425924d7fef2afbb64e186ac5"
+    },
+    {
+      "path": "commands/struggle.md",
+      "sha256": "c0e881b8130075e3649e7b478d65cb3e050f917b95f1c4f3438327b1c9c52671"
+    }
+  ]
+}
