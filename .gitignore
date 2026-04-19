@@ -1,0 +1,11 @@
+.env
+*.env.local
+/server
+/worker
+/mcp
+/bin/
+*.test
+*.out
+vendor/
+.air.toml
+tmp/

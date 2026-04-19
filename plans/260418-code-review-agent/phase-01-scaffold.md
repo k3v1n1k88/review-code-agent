@@ -6,7 +6,7 @@
 
 ## Overview
 - **Priority**: P1
-- **Status**: pending
+- **Status**: done
 - **Effort**: 6h
 - **Group**: A (parallel — no deps)
 - **Description**: Bootstrap Go monorepo, three binaries (`server`, `worker`, `mcp`), Dockerfiles, docker-compose stack (postgres+pgvector, rabbitmq, **redis**, backend, web), Makefile, env scaffolding.

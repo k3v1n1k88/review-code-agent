@@ -1,0 +1,9 @@
+.env
+*.env.local
+.git
+.gitignore
+.dockerignore
+README.md
+tmp/
+*.test
+*.out
