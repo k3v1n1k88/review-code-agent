@@ -1,6 +1,7 @@
 package main
 
 import (
+	"net/url"
 	"os"
 	"os/signal"
 	"syscall"
@@ -10,11 +11,22 @@ import (
 	"github.com/vng/review-code-agent/pkg/logger"
 )
 
+// redactURL strips credentials from a connection URL for safe logging.
+func redactURL(raw string) string {
+	u, err := url.Parse(raw)
+	if err != nil {
+		return "(unparseable)"
+	}
+	u.User = nil
+	return u.String()
+}
+
 func main() {
 	cfg := config.Load()
 	log := logger.New("info")
 
-	log.Info("worker starting", "amqp_url", cfg.AMQP.URL)
+	// Redact credentials from URL before logging.
+	log.Info("worker starting", "amqp_host", redactURL(cfg.AMQP.URL))
 
 	// Establish AMQP connection (stub — actual consumers added in Phase 09).
 	conn, err := amqp.Dial(cfg.AMQP.URL)

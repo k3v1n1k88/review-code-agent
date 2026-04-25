@@ -19,6 +19,8 @@ func main() {
 
 	e := echo.New()
 	e.HideBanner = true
+	e.Server.ReadTimeout = cfg.HTTP.ReadTimeout
+	e.Server.WriteTimeout = cfg.HTTP.WriteTimeout
 	e.Use(middleware.Recover())
 	e.Use(middleware.RequestID())
 
