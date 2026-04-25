@@ -71,7 +71,6 @@ prompt.md
 ck.md
 
 # Generated runtime layout for release/install smoke tests
-/.claude/
 
 # Local-only state inside tracked claude source
 claude/agent-memory/
