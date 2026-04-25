@@ -75,6 +75,7 @@ ck.md
 # Local-only state inside tracked claude source
 claude/agent-memory/
 claude/hooks/.logs/
+.claude/hooks/.logs/
 claude/session-state/latest.md
 claude/session-state/archive/
 claude/settings.bak.json
