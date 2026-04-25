@@ -1,12 +1,14 @@
 ---
 title: "Code Review Agent SaaS"
 description: "Internal SaaS for automated code review via webhook, REST API, and MCP"
-status: pending
+status: in-progress
 priority: P1
 effort: 120h
+completed: 6h (Phase 01)
 branch: main
 tags: [backend, frontend, api, auth, feature, infra]
 created: 2026-04-18
+updated: 2026-04-25
 ---
 
 # Code Review Agent SaaS — Master Plan
@@ -65,7 +67,7 @@ Group E  [final]
 
 | # | File | Status | Effort |
 |---|------|--------|--------|
-| 01 | [phase-01-scaffold.md](phase-01-scaffold.md) | pending | 6h |
+| 01 | [phase-01-scaffold.md](phase-01-scaffold.md) | done | 6h |
 | 02 | [phase-02-database.md](phase-02-database.md) | pending | 8h |
 | 03 | [phase-03-dashboard-scaffold.md](phase-03-dashboard-scaffold.md) | pending | 6h |
 | 04 | [phase-04-backend-core.md](phase-04-backend-core.md) | pending | 10h |
