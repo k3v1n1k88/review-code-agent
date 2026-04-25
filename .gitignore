@@ -1,0 +1,5 @@
+# Claude session artifacts
+.claude/hooks/.logs/
+.claude/session-state/latest.md
+.claude/session-state/archive/
+.claude/agent-memory/
