@@ -58,6 +58,14 @@ services:
       rabbitmq:
         condition: service_healthy
 
+  mcp:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.mcp
+    env_file: .env
+    depends_on:
+      - server
+
   web:
     build:
       context: ./web

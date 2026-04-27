@@ -63,6 +63,11 @@ func Load() *Config {
 		}{
 			BotToken: v.GetString("SLACK_BOT_TOKEN"),
 		},
+		Redis: struct {
+			URL string
+		}{
+			URL: v.GetString("REDIS_URL"),
+		},
 		CodeGraph: struct {
 			URL   string
 			Token string

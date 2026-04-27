@@ -3,6 +3,7 @@
 BINARY_DIR := bin
 
 build:
+	mkdir -p $(BINARY_DIR)
 	go build -o $(BINARY_DIR)/server ./cmd/server
 	go build -o $(BINARY_DIR)/worker ./cmd/worker
 	go build -o $(BINARY_DIR)/mcp    ./cmd/mcp

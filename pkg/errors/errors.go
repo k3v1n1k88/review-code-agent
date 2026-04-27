@@ -39,6 +39,3 @@ func New(kind error, msg string) *AppError {
 func Wrap(err error, msg string) error {
 	return fmt.Errorf("%s: %w", msg, err)
 }
-
-// Is delegates to the stdlib so callers can use errors.Is normally.
-func Is(err, target error) bool { return errors.Is(err, target) }

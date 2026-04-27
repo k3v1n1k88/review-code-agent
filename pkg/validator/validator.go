@@ -11,6 +11,6 @@ func Validate(v validation.Validatable) error {
 }
 
 // ValidateValue validates a single value against the given rules.
-func ValidateValue(value interface{}, rules ...validation.Rule) error {
+func ValidateValue(value any, rules ...validation.Rule) error {
 	return validation.Validate(value, rules...)
 }

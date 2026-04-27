@@ -29,6 +29,9 @@ type Config struct {
 	Slack struct {
 		BotToken string
 	}
+	Redis struct {
+		URL string
+	}
 	CodeGraph struct {
 		URL   string
 		Token string

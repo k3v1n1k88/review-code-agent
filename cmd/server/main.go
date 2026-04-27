@@ -2,7 +2,9 @@ package main
 
 import (
 	"context"
+	"errors"
 	"log/slog"
+	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
@@ -24,12 +26,13 @@ func main() {
 	e.Use(middleware.RequestID())
 
 	e.GET("/healthz", func(c echo.Context) error {
-		return c.JSON(200, map[string]string{"status": "ok"})
+		return c.JSON(http.StatusOK, map[string]string{"status": "ok"})
 	})
 
 	go func() {
-		if err := e.Start(cfg.HTTP.Addr); err != nil {
-			log.Info("server stopped", slog.String("reason", err.Error()))
+		if err := e.Start(cfg.HTTP.Addr); err != nil && !errors.Is(err, http.ErrServerClosed) {
+			log.Error("server failed to start", slog.String("err", err.Error()))
+			os.Exit(1)
 		}
 	}()
 

@@ -2,6 +2,7 @@ package main
 
 import (
 	"log/slog"
+	"net/url"
 	"os"
 	"os/signal"
 	"syscall"
@@ -14,7 +15,12 @@ func main() {
 	cfg := config.Load()
 	log := logger.Default()
 
-	log.Info("worker starting", slog.String("amqp", cfg.AMQP.URL))
+	amqpHost := cfg.AMQP.URL
+	if u, err := url.Parse(cfg.AMQP.URL); err == nil {
+		u.User = nil
+		amqpHost = u.String()
+	}
+	log.Info("worker starting", slog.String("amqp_host", amqpHost))
 
 	// Phase 09 will wire up the RabbitMQ consumer here.
 	quit := make(chan os.Signal, 1)
