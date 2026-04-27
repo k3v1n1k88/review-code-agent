@@ -1,0 +1,13 @@
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+plans/
+docs/
+web/node_modules/
+bin/
+*.md
+*.log
+.claude/
+.nightly*
