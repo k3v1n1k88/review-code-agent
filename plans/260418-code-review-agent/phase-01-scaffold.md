@@ -6,7 +6,7 @@
 
 ## Overview
 - **Priority**: P1
-- **Status**: pending
+- **Status**: done
 - **Effort**: 6h
 - **Group**: A (parallel — no deps)
 - **Description**: Bootstrap Go monorepo, three binaries (`server`, `worker`, `mcp`), Dockerfiles, docker-compose stack (postgres+pgvector, rabbitmq, **redis**, backend, web), Makefile, env scaffolding.
@@ -193,14 +193,14 @@ review-code-agent/
 
 ## Todo List
 
-- [ ] `go mod init` + deps installed
-- [ ] `pkg/logger`, `pkg/errors`, `pkg/validator` stubs compile
-- [ ] `internal/config/{config,load}.go` loads from env + file
-- [ ] Three cmd entrypoints compile (`go build ./cmd/...`)
-- [ ] Dockerfiles build < 50MB images
-- [ ] docker-compose up passes healthchecks
-- [ ] `curl /healthz` returns 200 from container
-- [ ] `.env.example` committed (real `.env` gitignored)
+- [x] `go mod init` + deps installed
+- [x] `pkg/logger`, `pkg/errors`, `pkg/validator` stubs compile
+- [x] `internal/config/{config,load}.go` loads from env + file
+- [x] Three cmd entrypoints compile (`go build ./cmd/...`)
+- [x] Dockerfiles build < 50MB images
+- [x] docker-compose up passes healthchecks
+- [x] `curl /healthz` returns 200 from container
+- [x] `.env.example` committed (real `.env` gitignored)
 
 ## Success Criteria
 - `make up && curl -f localhost:8080/healthz` exits 0

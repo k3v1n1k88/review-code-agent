@@ -25,3 +25,6 @@ coverage
 # Allow reading these files
 !.env
 !.env.*
+
+# Allow go build commands (needed for compilation verification)
+!build

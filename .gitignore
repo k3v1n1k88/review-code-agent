@@ -90,3 +90,9 @@ worktrees/
 
 # Generated OpenCode backup from scripts/generate-opencode.py --force
 .opencode.backup/
+
+# Go
+*.test
+*.out
+vendor/
+tmp/

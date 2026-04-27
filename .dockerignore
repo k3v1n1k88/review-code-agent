@@ -1,0 +1,13 @@
+.git
+.env
+.env.*
+!.env.example
+plans/
+docs/
+web/
+*.md
+.claude/
+tmp/
+vendor/
+*.test
+*.out
