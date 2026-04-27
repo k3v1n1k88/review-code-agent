@@ -1,7 +1,7 @@
 ---
 title: "Code Review Agent SaaS"
 description: "Internal SaaS for automated code review via webhook, REST API, and MCP"
-status: pending
+status: in-progress
 priority: P1
 effort: 120h
 branch: main
@@ -65,15 +65,15 @@ Group E  [final]
 
 | # | File | Status | Effort |
 |---|------|--------|--------|
-| 01 | [phase-01-scaffold.md](phase-01-scaffold.md) | pending | 6h |
+| 01 | [phase-01-scaffold.md](phase-01-scaffold.md) | cooked | 6h |
 | 02 | [phase-02-database.md](phase-02-database.md) | pending | 8h |
 | 03 | [phase-03-dashboard-scaffold.md](phase-03-dashboard-scaffold.md) | pending | 6h |
-| 04 | [phase-04-backend-core.md](phase-04-backend-core.md) | pending | 10h |
-| 05 | [phase-05-review-engine.md](phase-05-review-engine.md) | pending | 14h |
+| 04 | [phase-04-backend-core.md](phase-04-backend-core.md) | unblocked | 10h |
+| 05 | [phase-05-review-engine.md](phase-05-review-engine.md) | unblocked | 14h |
 | 06 | [phase-06-dashboard-features.md](phase-06-dashboard-features.md) | pending | 10h |
 | 07 | [phase-07-webhook.md](phase-07-webhook.md) | pending | 8h |
 | 08 | [phase-08-api-mcp.md](phase-08-api-mcp.md) | pending | 10h |
-| 09 | [phase-09-queue.md](phase-09-queue.md) | pending | 8h |
+| 09 | [phase-09-queue.md](phase-09-queue.md) | unblocked | 8h |
 | 10 | [phase-10-feedback-loop.md](phase-10-feedback-loop.md) | pending | 10h |
 | 11 | [phase-11-slack.md](phase-11-slack.md) | pending | 6h |
 | 12 | [phase-12-usage-tracking.md](phase-12-usage-tracking.md) | pending | 8h |
@@ -107,6 +107,14 @@ Total: 120h
 - **KISS**: clean architecture, interface-driven. One binary per concern (server/worker/mcp).
 - **DRY**: shared `pkg/` for logger, errors, validator; shared Next.js `components/ui`.
 - **<200 lines/file**: split handlers by domain; split repos by entity.
+
+## Progress Log
+
+### Session 1 — 2026-04-27 Phase 01 Completion
+**Status**: Phase 01 ✓ cooked
+**Delivered**: Go module scaffold, 3 binaries (server/worker/mcp), Docker Compose stack (postgres+pgvector, rabbitmq, redis, web), config system, shared pkg layer
+**Unblocked**: Group B (Phase 04, 05, 09) pending Phase 02/03 completion
+**Next**: Phase 02 (database) and Phase 03 (dashboard scaffold) can proceed in parallel
 
 ## Unresolved Questions
 

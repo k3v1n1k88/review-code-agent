@@ -6,7 +6,7 @@
 
 ## Overview
 - **Priority**: P1
-- **Status**: pending
+- **Status**: cooked
 - **Effort**: 6h
 - **Group**: A (parallel — no deps)
 - **Description**: Bootstrap Go monorepo, three binaries (`server`, `worker`, `mcp`), Dockerfiles, docker-compose stack (postgres+pgvector, rabbitmq, **redis**, backend, web), Makefile, env scaffolding.
@@ -220,3 +220,14 @@ review-code-agent/
 ## Next Steps
 - **Unblocks**: Phase 04 (needs main.go skeleton), Phase 09 (needs worker skeleton), Phase 08 (needs mcp skeleton).
 - **Parallel**: Phase 02 and 03 can run simultaneously.
+
+## Run metadata
+
+<!-- nightly:metadata:start -->
+**Status**: cooked
+**Cooked at**: 2026-04-27T16:31:44Z
+**Branch**: feature/260418-code-review-agent-phase-01-scaffold
+**Base commit**: 790a0c1
+**Sync state**: already-on-master
+**Cook log**: .nightly-runs/20260427T161916Z-phase-01-scaffold.log
+<!-- nightly:metadata:end -->
