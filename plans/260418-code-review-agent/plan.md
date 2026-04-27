@@ -65,7 +65,7 @@ Group E  [final]
 
 | # | File | Status | Effort |
 |---|------|--------|--------|
-| 01 | [phase-01-scaffold.md](phase-01-scaffold.md) | pending | 6h |
+| 01 | [phase-01-scaffold.md](phase-01-scaffold.md) | done | 6h |
 | 02 | [phase-02-database.md](phase-02-database.md) | pending | 8h |
 | 03 | [phase-03-dashboard-scaffold.md](phase-03-dashboard-scaffold.md) | pending | 6h |
 | 04 | [phase-04-backend-core.md](phase-04-backend-core.md) | pending | 10h |
